@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto; }
+
+body {
+  background-image: url(../sass/assets/img/GUIDELINE_WOM.png);
+  background-size: cover; }
+
+.wm-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch; }
+
+.wm-navigation {
+  min-width: 20%;
+  padding: 1em;
+  height: 100vh;
+  background-color: #701a7f;
+  color: #fff; }
+
+.wm-navigation ul li {
+  list-style-type: none;
+  padding: .4em .8em; }
+
+.wm-content {
+  width: 80%;
+  height: 100vh;
+  padding: 2em;
+  text-align: justify;
+  background-color: #fff;
+  float: right;
+  overflow: scroll; }
+
+@media all and (max-width: 640px) {
+  .wm-navigation, .wm-content {
+    width: 100%;
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap; }
+
+  .wm-navigation {
+    position: static;
+    height: auto; } }
+
+/*# sourceMappingURL=main.css.map */
