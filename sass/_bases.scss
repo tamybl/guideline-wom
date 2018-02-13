@@ -1,13 +1,24 @@
+//@include font-face("Cera Regular", ../sass/assets/fonts/cera-regular-webfont);
+
 * {
   box-sizing: border-box;
   margin: 0 auto;
+  font-family: $global_font;
 }
 
-body {
+/*body {
   background-image: url(../sass/assets/img/GUIDELINE_WOM.png);
   background-size: cover;
-}
+}*/
 
+h1 { font-size: 60px; }
+h2 { font-size: 34px; }
+//h3 { font-size: 1.5em; }
+h4 { font-size: 1.5em; }
+//h5 { font-size: 1.3em; }
+h6 { font-size: 1.125; }
+p { font-size: 0.875em }
+footer { font-size: .813em; }
 .wm-container {
   display: -webkit-box;
   display: -moz-box;
@@ -21,7 +32,7 @@ body {
 
 }
 
-.wm-navigation {
+.wm-nav {
   min-width: 20%;
   padding: 1em;
   height: 100vh;
@@ -30,7 +41,7 @@ body {
   
 }
 
-.wm-navigation ul li {
+.wm-nav ul li {
   list-style-type: none;
   padding: .4em .8em;
 }
@@ -42,19 +53,38 @@ body {
   text-align: justify;
   background-color: #fff;
   float: right;
-  overflow: scroll;
+  overflow: auto;
 }
 
-@media all and (max-width: 640px) {
+@media all and (max-width: 576px) {
   
-   .wm-navigation, .wm-content {
+   .wm-nav, .wm-content {
     width: 100%;
     -webkit-flex-flow: column wrap;
     flex-flow: column wrap;
    }
 
-   .wm-navigation {
-    position: static;
+   .wm-nav {
+    position: fixed;
     height: auto;
    }
+
+   .wm-content {
+      width: 100%;
+      overflow: initial;
+      top: 200px;
+   }
  }
+
+.url, a {
+  @include link($wom_lightest_gray);
+}
+
+.url:hover, a:hover {
+  @include link($wom_pink);
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}

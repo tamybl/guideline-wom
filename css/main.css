@@ -1,10 +1,59 @@
+@font-face {
+  font-family: 'cera';
+  src: url("../fonts/cera/cera-thin-webfont.woff2") format("woff2"), url("../fonts/cera/cera-thin-webfont.woff") format("woff");
+  font-weight: 100;
+  font-style: normal; }
+@font-face {
+  font-family: 'cera';
+  src: url("../fonts/cera/cera-light-webfont.woff2") format("woff2"), url("../fonts/cera/cera-light-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: 'cera';
+  src: url("../fonts/cera/cera-regular-webfont.woff2") format("woff2"), url("../fonts/cera/cera-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'cera';
+  src: url("../fonts/cera/cera-medium-webfont.woff2") format("woff2"), url("../fonts/cera/cera-medium-webfont.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+@font-face {
+  font-family: 'cera';
+  src: url("../fonts/cera/cera-bold-webfont.woff2") format("woff2"), url("../fonts/cera/cera-bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: 'cera';
+  src: url("../fonts/cera/cera-black-webfont.woff2") format("woff2"), url("../fonts/cera/cera-black-webfont.woff") format("woff");
+  font-weight: 800;
+  font-style: normal; }
 * {
   box-sizing: border-box;
-  margin: 0 auto; }
+  margin: 0 auto;
+  font-family: "cera"; }
 
-body {
+/*body {
   background-image: url(../sass/assets/img/GUIDELINE_WOM.png);
-  background-size: cover; }
+  background-size: cover;
+}*/
+h1 {
+  font-size: 60px; }
+
+h2 {
+  font-size: 34px; }
+
+h4 {
+  font-size: 1.5em; }
+
+h6 {
+  font-size: 1.125; }
+
+p {
+  font-size: 0.875em; }
+
+footer {
+  font-size: .813em; }
 
 .wm-container {
   display: -webkit-box;
@@ -17,14 +66,14 @@ body {
   justify-content: flex-start;
   align-items: stretch; }
 
-.wm-navigation {
+.wm-nav {
   min-width: 20%;
   padding: 1em;
   height: 100vh;
   background-color: #701a7f;
   color: #fff; }
 
-.wm-navigation ul li {
+.wm-nav ul li {
   list-style-type: none;
   padding: .4em .8em; }
 
@@ -35,16 +84,32 @@ body {
   text-align: justify;
   background-color: #fff;
   float: right;
-  overflow: scroll; }
+  overflow: auto; }
 
-@media all and (max-width: 640px) {
-  .wm-navigation, .wm-content {
+@media all and (max-width: 576px) {
+  .wm-nav, .wm-content {
     width: 100%;
     -webkit-flex-flow: column wrap;
     flex-flow: column wrap; }
 
-  .wm-navigation {
-    position: static;
-    height: auto; } }
+  .wm-nav {
+    position: fixed;
+    height: auto; }
+
+  .wm-content {
+    width: 100%;
+    overflow: initial;
+    top: 200px; } }
+.url, a {
+  color: #f1f3f5;
+  text-decoration: none; }
+
+.url:hover, a:hover {
+  color: #fA0080;
+  text-decoration: none; }
+
+.img-responsive {
+  max-width: 100%;
+  height: auto; }
 
 /*# sourceMappingURL=main.css.map */

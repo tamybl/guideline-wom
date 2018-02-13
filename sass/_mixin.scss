@@ -1,0 +1,20 @@
+// Fuente
+
+@mixin font($font, $font_size) {
+  font-family: $font;
+  font-size: $font_size;
+}
+
+@mixin link($color) {
+  color: $color;
+  text-decoration: none;
+  }
+
+@mixin font-face($font_name, $path) {
+  font-family: $font_name;
+  src: url($path+".eot") format("eot"),
+        url($path+".woff2") format("woff2"),
+        url($path+".ttf") format("truetype"),
+        url($path+".svg") format("svg");
+
+}
