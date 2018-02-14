@@ -1,14 +1,16 @@
 $(document).ready( function () {
+  $('.wm-nav ul li').click(function (e) {
+    e.preventDefault();
+    var href = $(this).find('a').attr('href');
+    //$(this).find('a').css('background-color', '#000');
+    if ($(href).offset().top !== 0) {
+      $(".wm-content").animate({ scrollTop: $(href).offset().top }, 1000);
+    }
+    
+  })
 
-  goToLink('.btn-tipografia', '#tipografia');
-  goToLink('.btn-headlines', '#headlines');
 
   
 })
 
-function goToLink(classbtn, id) {
-    $(classbtn).click( function () {
-    $(".wm-content").animate({ scrollTop: $(id).offset().top }, 1200);
-    })
-  }
 

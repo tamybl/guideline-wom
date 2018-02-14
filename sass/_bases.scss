@@ -1,15 +1,10 @@
-//@include font-face("Cera Regular", ../sass/assets/fonts/cera-regular-webfont);
-
 * {
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   margin: 0 auto;
+  padding: 0;
   font-family: $global_font;
 }
-
-/*body {
-  background-image: url(../sass/assets/img/GUIDELINE_WOM.png);
-  background-size: cover;
-}*/
 
 h1 { font-size: 60px; }
 h2 { font-size: 34px; }
@@ -17,8 +12,10 @@ h2 { font-size: 34px; }
 h4 { font-size: 1.5em; }
 //h5 { font-size: 1.3em; }
 h6 { font-size: 1.125; }
-p { font-size: 0.875em }
+p { font-size: .875em }
 footer { font-size: .813em; }
+
+
 .wm-container {
   display: -webkit-box;
   display: -moz-box;
@@ -27,17 +24,19 @@ footer { font-size: .813em; }
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content:flex-start;
+  justify-content:space-between;
   align-items: stretch;
 
 }
 
 .wm-nav {
+  display: flex;
   min-width: 20%;
   padding: 1em;
   height: 100vh;
   background-color: #701a7f;
   color: #fff;
+  
   
 }
 
@@ -50,10 +49,32 @@ footer { font-size: .813em; }
   width: 80%;
   height: 100vh;
   padding: 2em;
-  text-align: justify;
+  //text-align: justify;
   background-color: #fff;
-  float: right;
   overflow: auto;
+  
+}
+
+.wm-text {
+  max-width: 960px;
+}
+
+.url, a {
+  @include link($wom_lightest_gray);
+}
+
+.url:hover, a:hover {
+  @include link($wom_pink);
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-center {
+  display: inline-block;
+  margin: auto;
 }
 
 @media all and (max-width: 576px) {
@@ -76,15 +97,5 @@ footer { font-size: .813em; }
    }
  }
 
-.url, a {
-  @include link($wom_lightest_gray);
-}
 
-.url:hover, a:hover {
-  @include link($wom_pink);
-}
 
-.img-responsive {
-  max-width: 100%;
-  height: auto;
-}
