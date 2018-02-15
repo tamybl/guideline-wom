@@ -41,17 +41,28 @@ h1 {
 h2 {
   font-size: 34px; }
 
+h3 {
+  font-size: 1.7em; }
+
 h4 {
   font-size: 1.5em; }
 
+h5 {
+  font-size: 1.2em; }
+
 h6 {
-  font-size: 1.125; }
+  font-size: 1em; }
 
 p {
-  font-size: 0.875em; }
+  font-size: 1em;
+  line-height: 1.6;
+  color: #605961; }
 
 footer {
   font-size: .813em; }
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0.5em; }
 
 .wm-container {
   display: -webkit-box;
@@ -66,15 +77,24 @@ footer {
 
 .wm-nav {
   display: flex;
+  flex-direction: column;
   min-width: 20%;
-  padding: 1em;
+  padding: 0;
   height: 100vh;
   background-color: #701a7f;
   color: #fff; }
 
+.wm-nav ul {
+  padding: 0;
+  margin: 0; }
+
 .wm-nav ul li {
+  width: 100%;
   list-style-type: none;
-  padding: .4em .8em; }
+  padding: .6em 2em; }
+
+.logo {
+  padding: 1em 0.4em; }
 
 .wm-content {
   width: 80%;
@@ -84,6 +104,7 @@ footer {
   overflow: auto; }
 
 .wm-text {
+  position: relative;
   max-width: 960px; }
 
 .url, a {
@@ -91,8 +112,12 @@ footer {
   text-decoration: none; }
 
 .url:hover, a:hover {
-  color: #fA0080;
+  color: #8b9399;
   text-decoration: none; }
+
+.active {
+  width: 120%;
+  background-color: #801a93; }
 
 .img-responsive {
   max-width: 100%;
@@ -102,6 +127,9 @@ footer {
   display: inline-block;
   margin: auto; }
 
+.text-center {
+  text-align: center; }
+
 @media all and (max-width: 576px) {
   .wm-nav, .wm-content {
     width: 100%;
@@ -109,7 +137,8 @@ footer {
     flex-flow: column wrap; }
 
   .wm-nav {
-    position: fixed;
+    display: none;
+    position: static;
     height: auto; }
 
   .wm-content {

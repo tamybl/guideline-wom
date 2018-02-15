@@ -8,12 +8,21 @@
 
 h1 { font-size: 60px; }
 h2 { font-size: 34px; }
-//h3 { font-size: 1.5em; }
+h3 { font-size: 1.7em}
 h4 { font-size: 1.5em; }
-//h5 { font-size: 1.3em; }
-h6 { font-size: 1.125; }
-p { font-size: .875em }
+h5 { font-size: 1.2em; }
+h6 { font-size: 1em; }
+p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #605961; 
+}
 footer { font-size: .813em; }
+
+h1, h2, h3, h4, h5 , h6 {
+  padding: 0.5em;
+}
+
 
 
 .wm-container {
@@ -31,8 +40,9 @@ footer { font-size: .813em; }
 
 .wm-nav {
   display: flex;
+  flex-direction: column;
   min-width: 20%;
-  padding: 1em;
+  padding: 0;
   height: 100vh;
   background-color: #701a7f;
   color: #fff;
@@ -40,9 +50,19 @@ footer { font-size: .813em; }
   
 }
 
+.wm-nav ul {
+  padding: 0;
+  margin: 0;
+}
+
 .wm-nav ul li {
+  width: 100%;
   list-style-type: none;
-  padding: .4em .8em;
+  padding: .6em 2em;
+}
+
+.logo {
+  padding: 1em 0.4em;
 }
 
 .wm-content {
@@ -56,6 +76,7 @@ footer { font-size: .813em; }
 }
 
 .wm-text {
+  position: relative;
   max-width: 960px;
 }
 
@@ -64,7 +85,12 @@ footer { font-size: .813em; }
 }
 
 .url:hover, a:hover {
-  @include link($wom_pink);
+  @include link($wom_medium_gray);
+}
+
+.active {
+  width: 120%;
+  background-color: $wom_light_purple;
 }
 
 .img-responsive {
@@ -77,6 +103,10 @@ footer { font-size: .813em; }
   margin: auto;
 }
 
+.text-center {
+  text-align: center;
+}
+
 @media all and (max-width: 576px) {
   
    .wm-nav, .wm-content {
@@ -86,7 +116,8 @@ footer { font-size: .813em; }
    }
 
    .wm-nav {
-    position: fixed;
+    display: none;
+    position: static;
     height: auto;
    }
 
