@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   font-family: $global_font;
 }
@@ -43,7 +43,6 @@ h1, h2, h3, h4, h5 , h6 {
   flex-direction: column;
   min-width: 20%;
   padding: 0;
-  height: 100vh;
   background-color: #701a7f;
   color: #fff;
   
@@ -59,25 +58,37 @@ h1, h2, h3, h4, h5 , h6 {
   width: 100%;
   list-style-type: none;
   padding: .6em 2em;
+  transition: all .3s ease;
 }
 
 .logo {
   padding: 1em 0.4em;
 }
 
+.toggle-menu {
+  display: none;
+}
+
+
 .wm-content {
   width: 80%;
-  height: 100vh;
   padding: 2em;
   //text-align: justify;
   background-color: #fff;
-  overflow: auto;
   
 }
 
 .wm-text {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
   max-width: 960px;
+}
+
+.wm-nav-content {
+  top: 0;
+  position: fixed;
+  width: 20%;
 }
 
 .url, a {
@@ -99,7 +110,7 @@ h1, h2, h3, h4, h5 , h6 {
 }
 
 .img-center {
-  display: inline-block;
+  display: flex;
   margin: auto;
 }
 
@@ -109,22 +120,37 @@ h1, h2, h3, h4, h5 , h6 {
 
 @media all and (max-width: 576px) {
   
-   .wm-nav, .wm-content {
+   .wm-nav, .wm-content, .wm-text {
     width: 100%;
     -webkit-flex-flow: column wrap;
     flex-flow: column wrap;
    }
 
    .wm-nav {
-    display: none;
+    //display: none;
     position: static;
-    height: auto;
+    height: 90px;
+    overflow: hidden;
    }
 
    .wm-content {
       width: 100%;
       overflow: initial;
       top: 200px;
+   }
+
+   .wm-nav-content {
+    position: static;
+    width: 100%;
+   }
+
+  .logo {
+    display: inline-block;
+   }
+
+   .toggle-menu {
+    display: block;
+    float: right;
    }
  }
 
