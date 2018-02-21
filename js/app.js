@@ -30,6 +30,11 @@ $(document).ready( function () {
     }
     
   })
+
+  if(window.screen.width < 750) {
+    $('.wm-nav-content ul').hide();
+    $('.logo img').css('width','70px');
+  }
 })
 
 
