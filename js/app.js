@@ -1,5 +1,10 @@
 $(document).ready( function () {
 
+  if(screen.width < 750 || $(window).width() < 750) {
+    $('.wm-nav-content ul').hide();
+    $('.logo img').css('width','70px');
+  }
+
   $(document).scroll(function () {
     scrollSection();
   });
@@ -30,11 +35,6 @@ $(document).ready( function () {
     }
     
   })
-
-  if(window.screen.width < 750) {
-    $('.wm-nav-content ul').hide();
-    $('.logo img').css('width','70px');
-  }
 })
 
 
