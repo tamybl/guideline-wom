@@ -4,24 +4,34 @@ $(document).ready( function () {
     scrollSection();
   });
 
-  if(window.screen.width < 1370) {
-    console.log('Soy una pantalla pequeña');
-  }
-
-  $(window).resize(function () {
-    var size = $(this).width();
-    if(size < 768) {
-      console.log("Soy un size pequeño");
-    }
-    
-  })
-
-  $('.wm-nav-content ul li').click(function (e) {
+  $('.list').click(function (e) {
     e.preventDefault();
     var href = $(this).find('a').attr('href');
     $("html, body").stop().animate({ scrollTop: $(href).position().top }, 1000);
+    if($(window).width() < 750) {
+      toggleMenu();
+    }
   });
+
+  $('.toggle-menu').click(function () {
+    toggleMenu();
+  })
+
+  $(window).resize(function () {
+    var size = $(this).width();
+    console.log(size);
+    if(size < 750) {
+      $('.wm-nav-content ul').hide();
+      $('.logo img').css('width','70px');
+    }
+    else {
+      $('.wm-nav-content ul').show();
+      $('.logo img').css('width','auto');
+    }
+    
+  })
 })
+
 
 function scrollSection () {
   var scrollPosition = $(document).scrollTop();
@@ -35,6 +45,21 @@ function scrollSection () {
   });
 }
 
+function toggleMenu () {
+  $('.wm-nav-content ul').toggle(500);
+}
+
 // ver appendTo de Jquery
 
 
+/*  if(window.screen.width < 1370) {
+    console.log('Soy una pantalla pequeña');
+  }
+
+  $(window).resize(function () {
+    var size = $(this).width();
+    if(size < 768) {
+      console.log("Soy un size pequeño");
+    }
+    
+  })*/
