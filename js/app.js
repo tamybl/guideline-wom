@@ -1,8 +1,20 @@
 $(document).ready( function () {
-  
+
   $(document).scroll(function () {
     scrollSection();
   });
+
+  if(window.screen.width < 1370) {
+    console.log('Soy una pantalla pequeña');
+  }
+
+  $(window).resize(function () {
+    var size = $(this).width();
+    if(size < 768) {
+      console.log("Soy un size pequeño");
+    }
+    
+  })
 
   $('.wm-nav-content ul li').click(function (e) {
     e.preventDefault();
@@ -22,5 +34,7 @@ function scrollSection () {
     }
   });
 }
+
+// ver appendTo de Jquery
 
 
