@@ -2,7 +2,7 @@ $(document).ready( function () {
 
   if(screen.width < 750 || $(window).width() < 750) {
     $('.wm-nav-content ul').hide();
-    $('.logo img').css('width','70px');
+    $('.logo img').css('width','55px');
   }
 
   $(document).scroll(function () {
@@ -27,7 +27,7 @@ $(document).ready( function () {
     console.log(size);
     if(size < 750) {
       $('.wm-nav-content ul').hide();
-      $('.logo img').css('width','70px');
+      $('.logo img').css('width','55px');
     }
     else {
       $('.wm-nav-content ul').show();

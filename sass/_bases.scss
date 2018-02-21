@@ -6,12 +6,12 @@
   font-family: $global_font;
 }
 
-h1 { font-size: 60px; }
-h2 { font-size: 34px; }
-h3 { font-size: 1.7em}
-h4 { font-size: 1.5em; }
-h5 { font-size: 1.2em; }
-h6 { font-size: 1em; }
+h1 { font-size: 60px; padding: $padding_reset; }
+h2 { font-size: 34px; padding: $padding_reset; }
+h3 { font-size: 1.7em; padding: $padding_reset; }
+h4 { font-size: 1.5em; padding: $padding_reset; }
+h5 { font-size: 1.2em; padding: $padding_reset; }
+h6 { font-size: 1em; padding: $padding_reset; }
 p {
   font-size: 1em;
   line-height: 1.6;
@@ -25,6 +25,10 @@ h1, h2, h3, h4, h5 , h6 {
 
 article {
   min-height: 400px;
+
+  p {
+    padding-bottom: 2em;
+  }
 }
 
 
@@ -119,10 +123,15 @@ article {
   align-items: start;
   flex-wrap: wrap;
   justify-content: center;
+  margin: auto;
 }
 
 .text-center {
   text-align: center;
+}
+
+.list-title {
+  padding-left: .5em;
 }
 
 @media all and (max-width: 768px) {
@@ -152,17 +161,18 @@ article {
 
   .logo {
     display: inline-block;
+    padding: 0.3em 0.6em 0.1em 0.6em;
    }
 
    .toggle-menu {
     display: block;
     float: right;
-    font-size: 1.6em;
-    padding: .1em .6em;
+    font-size: 1.3em;
+    padding: .15em .6em;
    }
 
    article {
-    margin-top: 90px;
+    margin-top: 40px;
    }
  }
 
