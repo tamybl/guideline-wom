@@ -761,11 +761,6 @@ h6 {
   font-size: 1em;
   padding: 0.5em 0 !important; }
 
-p {
-  font-size: 1em;
-  line-height: 1.6;
-  color: #605961; }
-
 footer {
   font-size: .813em; }
 
@@ -775,7 +770,9 @@ h1, h2, h3, h4, h5, h6 {
 article {
   min-height: 400px; }
   article p {
-    padding-bottom: 2em; }
+    padding-bottom: 2em;
+    line-height: 2.2;
+    color: #3a333a; }
 
 .wm-container {
   display: -webkit-box;
@@ -804,10 +801,12 @@ article {
       transition: all .3s ease; }
 
 .list {
-  padding: .6em 2em; }
+  padding: .6em 55px;
+  font-size: .95em;
+  font-weight: bold; }
 
 .logo {
-  padding: 0.3em 0.6em; }
+  padding: 3em 0.6em; }
 
 .toggle-menu {
   display: none; }
@@ -856,7 +855,8 @@ article {
   text-align: center; }
 
 .list-title {
-  padding-left: .5em; }
+  padding-left: 35px;
+  font-size: 1.3em; }
 
 @media all and (max-width: 768px) {
   .wm-nav, .wm-content, .wm-text {

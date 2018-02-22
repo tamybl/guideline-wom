@@ -6,17 +6,13 @@
   font-family: $global_font;
 }
 
+
 h1 { font-size: 60px; padding: $padding_reset; }
 h2 { font-size: 34px; padding: $padding_reset; }
 h3 { font-size: 1.7em; padding: $padding_reset; }
 h4 { font-size: 1.5em; padding: $padding_reset; }
 h5 { font-size: 1.2em; padding: $padding_reset; }
 h6 { font-size: 1em; padding: $padding_reset; }
-p {
-  font-size: 1em;
-  line-height: 1.6;
-  color: #605961; 
-}
 footer { font-size: .813em; }
 
 h1, h2, h3, h4, h5 , h6 {
@@ -25,9 +21,10 @@ h1, h2, h3, h4, h5 , h6 {
 
 article {
   min-height: 400px;
-
   p {
     padding-bottom: 2em;
+    line-height: 2.2;
+    color: #3a333a;
   }
 }
 
@@ -67,11 +64,13 @@ article {
 }
 
 .list {
-  padding: .6em 2em;
+  padding: .6em 55px;
+  font-size: .95em;
+  font-weight: bold;
 }
 
 .logo {
-  padding: 0.3em 0.6em;
+  padding: 3em 0.6em;
 }
 
 .toggle-menu {
@@ -131,7 +130,8 @@ article {
 }
 
 .list-title {
-  padding-left: .5em;
+  padding-left: 35px;
+  font-size: 1.3em;
 }
 
 @media all and (max-width: 768px) {
