@@ -11,19 +11,16 @@ h1 { font-size: 60px; padding: $padding_reset; }
 h2 { font-size: 34px; padding: $padding_reset; }
 h3 { font-size: 1.7em; padding: $padding_reset; }
 h4 { font-size: 1.5em; padding: $padding_reset; }
-h5 { font-size: 1.2em; padding: $padding_reset; }
-h6 { font-size: 1em; padding: $padding_reset; }
+h5 { font-size: 1.2em; padding: $padding_reset;}
+h6 { font-size: 1em; padding: $padding_reset;}
 footer { font-size: .813em; }
 
-h1, h2, h3, h4, h5 , h6 {
-  padding: 0.5em;
-}
 
 article {
   min-height: 400px;
   p {
     padding-bottom: 2em;
-    line-height: 2.2;
+    line-height: 22px;
     color: #3a333a;
   }
 }
@@ -40,13 +37,12 @@ article {
   flex-wrap: wrap;
   justify-content:space-between;
   align-items: stretch;
-
 }
 
 .wm-nav {
   display: flex;
   flex-direction: column;
-  min-width: 20%;
+  flex: 1 1 20%;
   padding: 0;
   background-color: #701a7f;
   color: #fff;
@@ -59,12 +55,13 @@ article {
       width: 100%;
       list-style-type: none;
       transition: all .3s ease;
+      line-height: 1.3;
     }
   }
 }
 
 .list {
-  padding: .6em 55px;
+  padding: .6em 3em;
   font-size: .95em;
   font-weight: bold;
 }
@@ -79,7 +76,8 @@ article {
 
 
 .wm-content {
-  width: 80%;
+  display: flex;
+  flex: 1 1 80%;
   padding: 2em;
   background-color: #fff;
   
@@ -130,7 +128,8 @@ article {
 }
 
 .list-title {
-  padding-left: 35px;
+  
+  padding: .5em 0 .5em 1.2em;
   font-size: 1.3em;
 }
 
