@@ -18,6 +18,7 @@ footer { font-size: .813em; }
 
 article {
   min-height: 400px;
+  padding-bottom: 30px;
   p {
     padding-bottom: 2em;
     line-height: 22px;
@@ -184,9 +185,21 @@ article {
   float: right;
  }
 
-@media all and (max-width: 992px) {
+@media all and (min-width: 769px) and (max-width: 1100px) {
   .list-title {
-    font-size: 1em;
+    font-size: 1.2em;
+  }
+
+  .wm-content {
+  flex: 1 1 75%;
+  } 
+
+  .wm-nav-content {
+    width: 25%;
+  }
+
+  .wm-nav {
+    flex: 1 1 25%;
   }
 }
 
