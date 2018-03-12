@@ -907,5 +907,14 @@ article {
 
   .wm-nav {
     flex: 1 1 25%; } }
+/* Prism Style */
+pre {
+  max-height: 5em; }
+
+.code-expanded {
+  max-height: 100rem; }
+
+.btn-show-moreless {
+  border: 0; }
 
 /*# sourceMappingURL=main.css.map */

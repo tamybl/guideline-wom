@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <title>Guía de Estilo WOM</title>
   <link rel="icon" type="image/png" sizes="16x16" href="sass/assets/img/favicon_wom.png">
+  <!-- Link CSS principal de sitio WOM -->
+  <link rel="stylesheet" href="https://www.wom.cl/womstrap-theme/css/template.css?v=1.15&amp;browserId=other&amp;minifierType=css&amp;languageId=en_US">
+  <!-- Link CSS de Libreria Prism para Sintaxis de Códigos -->
+  <link rel="stylesheet" href="css/prism.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -38,6 +42,16 @@
         <h3>Tipografía</h3>
         <p>Un buen Headline significa que más usuarios lo leeran y veran, se asegura de que el esfuerzo que dedique a escribir un artículo no se desperdicie, y tambien puede ayudar a su contenido a ser recogido por los motores de búsqueda.</p>
         <div><img src="sass/assets/img/fonts.png" alt="" class="img-flex img-responsive"></div>
+        <div class="code-section">
+          <pre><code class="language-css">
+p { font-family: 'Cera';
+font-weight: '500';
+}
+          </code></pre>
+          <button class="btn-show-moreless">Ver Más</button>
+        </div>
+        
+
         </article>
 
         <article id="headlines">
@@ -102,6 +116,7 @@
   </div>
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/prism.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

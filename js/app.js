@@ -13,7 +13,7 @@ $(document).ready( function () {
     e.preventDefault();
     var href = $(this).find('a').attr('href');
     $("html, body").stop().animate({ scrollTop: $(href).position().top }, 1000);
-    if($(window).width() < 750) {
+    if($(window).width() < 753) {
       toggleMenu();
     }
   });
@@ -25,7 +25,7 @@ $(document).ready( function () {
   $(window).resize(function () {
     var size = $(this).width();
     console.log(size);
-    if(size < 750) {
+    if(size < 752) {
       $('.wm-nav-content ul').hide();
       $('.logo img').css('width','55px');
     }
@@ -35,6 +35,12 @@ $(document).ready( function () {
     }
     
   })
+
+  $('.btn-show-moreless').click(function () {
+    $(this).parent().find('pre').toggleClass('code-expanded');
+    $(this).text($(this).text() == 'Ver Menos' ? 'Ver Más' : 'Ver Menos');
+  })
+  
 })
 
 function scrollSection () {

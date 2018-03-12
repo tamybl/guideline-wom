@@ -203,3 +203,18 @@ article {
   }
 }
 
+/* Prism Style */ 
+
+pre {
+  max-height: 5em;
+  //transition: max-height ease 2s;
+}
+
+.code-expanded {
+  max-height: 100rem;
+}
+
+.btn-show-moreless {
+  border: 0;
+
+}
