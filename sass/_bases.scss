@@ -18,7 +18,7 @@ footer { font-size: .813em; }
 
 article {
   min-height: 400px;
-  padding-bottom: 30px;
+  padding-bottom: 70px;
   p {
     padding-bottom: 2em;
     line-height: 22px;
@@ -47,6 +47,7 @@ article {
   padding: 0;
   background-color: #701a7f;
   color: #fff;
+  z-index: 999999;
   
   ul {
   padding: 0;
@@ -79,12 +80,15 @@ article {
 .wm-content {
   display: flex;
   flex: 1 1 80%;
+  max-width: 80%;
   padding: 2em;
   background-color: #fff;
+
   
 }
 
 .wm-text {
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -95,13 +99,14 @@ article {
   top: 0;
   position: fixed;
   width: 20%;
+  z-index: 999999;
 }
 
-.url, a {
+.list a {
   @include link($wom_lightest_gray);
 }
 
-.url:hover, a:hover {
+.list a:hover {
   @include link($wom_pink);
 }
 
@@ -192,6 +197,7 @@ article {
 
   .wm-content {
   flex: 1 1 75%;
+  max-width: 75%;
   } 
 
   .wm-nav-content {
@@ -214,7 +220,25 @@ pre {
   max-height: 100rem;
 }
 
+.code-section {
+  width: 100%;
+  padding-bottom: 4em;
+}
+
 .btn-show-moreless {
   border: 0;
+  outline: none;
+  background: #e92070;
+  padding: .75rem 1rem;
+  color: #fff;
+  font-size: .875rem;
+  border-radius: .25rem;
+  display: block;
+  max-width: 167px;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  margin-left: auto;
 
 }
