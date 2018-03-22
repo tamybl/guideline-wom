@@ -38,7 +38,21 @@ $(document).ready( function () {
 
   $('.btn-show-moreless').click(function () {
     $(this).parent().find('pre').toggleClass('code-expanded');
-    $(this).text($(this).text() == 'Ver Menos' ? 'Ver Más' : 'Ver Menos');
+    $(this).find('span').text($(this).find('span').text() == 'Ver Menos' ? 'Ver Más' : 'Ver Menos');
+  })
+
+  $('.btn-copy-clipboard').click(function () {
+    // Se copia el codigo que corresponde con el boton
+    var copyCode = $(this).parent().find('code').text();
+    //console.log(copyCode);
+    // Se crea un elemento de textarea y se 
+    var textarea = document.createElement('textarea');
+    document.body.appendChild(textarea);
+    textarea.append(copyCode);
+    textarea.select();
+    /* Copy the text inside the text field */
+    document.execCommand("Copy");
+    document.body.removeChild(textarea);
   })
   
 })

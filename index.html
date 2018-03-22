@@ -6,7 +6,7 @@
   <title>Guía de Estilo WOM</title>
   <link rel="icon" type="image/png" sizes="16x16" href="sass/assets/img/favicon_wom.png">
   <!-- Link CSS principal de sitio WOM -->
-  <link rel="stylesheet" href="https://www.wom.cl/womstrap-theme/css/template.css?v=1.15&amp;browserId=other&amp;minifierType=css&amp;languageId=en_US">
+  <!--<link rel="stylesheet" href="https://www.wom.cl/womstrap-theme/css/template.css?v=1.15&amp;browserId=other&amp;minifierType=css&amp;languageId=en_US">-->
   <!-- Link CSS de Libreria Prism para Sintaxis de Códigos -->
   <link rel="stylesheet" href="css/prism.css">
   <link rel="stylesheet" href="css/main.css">
@@ -41,7 +41,7 @@
         <article id="tipografia">
         <h3>Tipografía</h3>
         <p>Un buen Headline significa que más usuarios lo leeran y veran, se asegura de que el esfuerzo que dedique a escribir un artículo no se desperdicie, y tambien puede ayudar a su contenido a ser recogido por los motores de búsqueda.</p>
-        <div><img src="sass/assets/img/fonts.png" alt="" class="img-flex img-responsive"></div>
+        <div><img src="sass/assets/img/FONTS2.svg" alt="" class="img-flex img-responsive"></div>
         <div class="code-section">
           <pre><code class="language-css">
 p { 
@@ -49,7 +49,8 @@ p {
     font-weight: '500';
 }
           </code></pre>
-          <a class="btn-show-moreless">Ver Más</a>
+          <a class="btn-show-moreless"><i class="fas fa-code"></i> <span>Ver Más</span></a> 
+          <a class="btn-copy-clipboard"><i class="far fa-clipboard"></i> Copiar</a>
         </div>
         
 
@@ -59,6 +60,28 @@ p {
           <h3>Headlines</h3>
           <p>Un buen Headline significa que más usuarios lo leeran y veran, se asegura de que el esfuerzo que dedique a escribir un artículo no se desperdicie, y tambien puede ayudar a su contenido a ser recogido por los motores de búsqueda.</p>
           <div><img src="sass/assets/img/fuentes.jpg" alt="" class="img-responsive"></div>
+          <div class="code-section">
+            <pre><code class="language-css">
+h1 { 
+  font-size: 16px;
+}
+
+h2 { 
+  font-size: 16px;
+}
+
+h3 { 
+  font-size: 16px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+          </code></pre>
+          <a class="btn-show-moreless"><i class="fas fa-code"></i> <span>Ver Más</span></a>
+          <a class="btn-copy-clipboard"><i class="far fa-clipboard"></i> Copiar</a>
+        </div>
         </article>
 
         <article id="colores">
@@ -78,68 +101,14 @@ p {
           <pre><code class="language-markup">
             <script type="text/plain" class="language-markup">
 <header class="header">
-  <section class="topbar_wrapper"> 
-    <section class="topbar wrapper"> 
-      <figure class="logo">
-        <a href="/"> 
-          <img src="{url_image}" class="logo-img">
-        </a>  
-      </figure> 
-      <nav class="left"> 
-        <a onclick="location='http://www.wom.cl'" class="left-link active">Personas</a> 
-        <a onclick="location='http://www.wom.cl/sucursales'" class="left-link" href="http://www.wom.cl/empresas">Empresas</a> 
-      </nav> 
-      <nav class="right"> 
-        <a onclick="location='http://www.wom.cl/sucursales'" class="right-link right-link--sucursales">
-          <span class="icono icon-pin"></span>Sucursales
-        </a> 
-        <a href="https://www.wom.cl/pagofacil" target="_blank" class="right-link right-link--contactanos">
-          <span class="icono icon-pagofacil"></span>PAGA TU CUENTA
-        </a> 
-        <a href="#" class="right-link right-link--contactanos btn-accion-contactanos">
-          <span class="icono icon-footer-call"></span>CONTÁCTANOS
-        </a> 
-        <a onclick="location='http://www.wom.cl/sucursal-online/'" class="right-link right-link--miwom">
-          <span class="icono icon-mi-wom"></span>Sucursal Miwom
-        </a> 
-        <div class="bloque_contactanos"> 
-          <div class="bloque_contactanos-siquieres"> 
-            <h2 class="bloque_contactanos-title">SI QUIERES PORTATE A WOM</h2> 
-            <div class="bloque_contactanos-info"> 
-              <div class="item"> 
-                <span class="icon icon-footer-wtsp"></span> 
-                  <h3> <span>Escríbenos por <strong>Whatsapp:</strong></span> <span class="num"><a href="https://api.whatsapp.com/send?phone=56933136000" target="_blank" style="color: #2B0A37;">+56 9 33 13 6000</a></span> </h3> 
-              </div> 
-              <div class="item"> 
-                <span class="icon icon-footer-call"></span> 
-                <h3> <span>Llámanos al</span> <span class="num">600 200 1000</span> </h3> 
-              </div> 
-            </div> 
-          </div> 
-          <div class="bloque_contactanos-sieres"> 
-            <h2 class="bloque_contactanos-title">SI ERES WOMER</h2> 
-            <div class="bloque_contactanos-info"> 
-              <div class="item"> <span class="icon icon-footer-call"></span> <h3> <span>Llámanos al:</span> <span class="num">2 2 337 76 00</span> </h3> </div> <div class="item"> <span class="icon icon-smartphone"></span> <h3> <span>Llámanos al:</span> <span class="num">2 2 337 76 00</span> </h3> </div> 
-            </div> 
-          </div> 
-        </div> 
-      </nav> 
-    </section>
-    <!-- topbar --> 
-  </section> 
-  <section class="menu_wrapper" id="main_menu"> 
-    <nav class="menu wrapper"> 
-      <a href="https://www.wom.cl" class="menu-link pressed" data-union="Inicio">Inicio</a> 
-      <a href="https://www.wom.cl/planes" class="menu-link" data-union="Planes">Planes</a> 
-      <a href="https://www.wom.cl/prepago" class="menu-link" data-union="Prepago">Prepago</a> 
-      <a href="https://www.wom.cl/internet" class="menu-link" data-union="Internet">Internet</a> 
-      <a href="http://www.wom.cl/equipos" class="menu-link" data-union="Equipos">Equipos</a> 
-    </nav> 
-  </section> 
+  <section class="topbar_wrapper"> </section>
+    <section class="topbar wrapper"> </section>
+      
 </header>
 </script>
           </code></pre>
-          <a class="btn-show-moreless">Ver Más</a>
+          <a class="btn-show-moreless"><i class="fas fa-code"></i> <span>Ver Más</span></a>
+          <a class="btn-copy-clipboard"><i class="far fa-clipboard"></i> Copiar</a>
           </div>
 
           <h5>NAVBAR CONSUME MOBILE</h5>
@@ -150,35 +119,13 @@ p {
           <img src="sass/assets/img/navbar-mobile2.jpg" alt="" class="img-responsive">
           </div>
           <div class="code-section">
-          <pre><code class="language-markup">
-            <script type="text/plain" class="language-markup">
-              <section class="header_mobile" id="header_mobile"> 
-                <div class="mobile_bar"> 
-                  <figure class="logo"> 
-                    <a href="/"> <img src="/documents/20182/57328/logo-wom-2.png/7a009b8c-ddd3-0d92-cac6-d2006805c2a6?t=1515679713301" class="logo-img"></a>  
-                  </figure> 
-                  <span class="mobile_bar-btn_menu icon-menu-mobile" id="btn_menu" data-active="close"></span> 
-                </div> 
-<section class="menu_mobile" id="menu_mobile"> 
-  <section class="tab"> 
-    <a onclick="location='http://www.wom.cl'" class="tab-btn tab-btn--active">Personas</a> 
-    <a onclick="location='http://www.wom.cl/sucursales'" class="tab-btn">Empresa</a> 
-  </section> 
-    <nav class="menu"> 
-      <a href="https://www.wom.cl" class="menu-link" data-union="Inicio">Inicio</a> 
-      <a href="https://www.wom.cl/planes" class="menu-link" data-union="Planes">Planes</a> 
-      <a href="https://www.wom.cl/prepago" class="menu-link" data-union="Prepago">Prepago</a> 
-      <a href="https://www.wom.cl/internet" class="menu-link" data-union="Internet">Internet</a> 
-      <a href="http://www.wom.cl/equipos" class="menu-link" data-union="Equipos">Equipos</a> 
-      <a href="https://sucursalmiwom.wom.cl" class="menu-sucursal">Sucursal MiWOM</a> 
-    </nav> 
-  </section> 
-</section>
-
-
+            <pre><code class="language-markup">
+              <script type="text/plain" class="language-markup">
+<h1>Hola</h1>
             </script>
-              </code></pre>
-              <a class="btn-show-moreless">Ver Más</a>
+          </code></pre>
+              <a class="btn-show-moreless"><i class="fas fa-code"></i> <span>Ver Más</span></a>
+              <a class="btn-copy-clipboard"><i class="far fa-clipboard"></i> Copiar</a>
           </div>
         </article>
         <article id="botones">
@@ -212,9 +159,11 @@ p {
           <h3>Credenciales</h3>
           <p>Lorem ipsum dolor sit amet, consectetur  adipisicing elit. Ea est ex minima debitis deleniti nam quasi placeat eveniet, voluptate impedit assumenda blanditiis velit qui, aspernatur dolores. Est dignissimos adipisci maxime.</p>
           <p><img src="sass/assets/img/credenciales1.jpg" alt="" class="img-responsive img-flex"> <img src="sass/assets/img/credenciales2.jpg" alt="" class="img-responsive img-flex"></p>
-          <div class="code-section">
-          <pre><code class="language-markup">
-            <script type="text/plain" class="language-markup">
+
+<div class="code-section">
+  <pre><code class="language-markup">
+     <script type="text/plain" class="language-markup">
+
 <section class="section-center inner-pad-v"> 
   <section class="wrapper texto_centrado"> 
     <h1 class="texto_centrado-titulo">Lorem ipsum dolor</h1> 
@@ -240,24 +189,23 @@ p {
 </section>
             </script>
           </code></pre>
-          <a class="btn-show-moreless">Ver Más</a>
+
+          <a class="btn-show-moreless"><i class="fas fa-code"></i> <span>Ver Más</span></a>
+          <a class="btn-copy-clipboard"><i class="far fa-clipboard"></i> Copiar</a>
           </div>
 
           <p><img src="sass/assets/img/credenciales-mob.jpg" alt="" class="img-responsive img-flex"></p>
 
           <div class="code-section">
-          <pre><code class="language-markup">
-          <script type="text/plain" class="language-markup">
-<section class="section-center inner-pad-v">
-
-</section>
-</script>
+            <pre><code class="language-markup">
+              <script type="text/plain" class="language-markup">
+                <h1>Hola</h1>
+              </script>
           </code></pre>
-          <a class="btn-show-moreless">Ver Más</a>
+          <a class="btn-show-moreless"><i class="fas fa-code"></i> <span>Ver Más</span></a>
+          <a class="btn-copy-clipboard"><i class="far fa-clipboard"></i> Copiar</a>
           </div>
         </article>
-
-      </section>
     </main>
   </div>
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>

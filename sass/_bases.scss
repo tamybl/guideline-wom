@@ -154,7 +154,8 @@ article {
    }
 
    .wm-content {
-      width: 100%;
+      max-width: 100%;
+      flex: 1 1 100%;
       overflow: initial;
       top: 200px;
    }
@@ -225,20 +226,15 @@ pre {
   padding-bottom: 4em;
 }
 
-.btn-show-moreless {
+.btn-show-moreless span, .btn-copy-clipboard {
   border: 0;
   outline: none;
-  background: #e92070;
-  padding: .75rem 1rem;
-  color: #fff;
-  font-size: .875rem;
-  border-radius: .25rem;
-  display: block;
-  max-width: 167px;
-  width: 100%;
+  color: #e92070;
+  text-decoration: underline;
+  padding: .25em .5em;
+  font-size: 1rem;
   text-transform: uppercase;
   font-weight: 700;
-  text-align: center;
+  text-align: right;
   margin-left: auto;
-
 }
