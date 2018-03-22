@@ -922,21 +922,19 @@ pre {
 
 .code-section {
   width: 100%;
-  padding-bottom: 4em; }
+  padding-bottom: 4em;
+  text-align: right; }
 
-.btn-show-moreless {
+.btn-show-moreless, .btn-copy-clipboard {
   border: 0;
   outline: none;
   color: #e92070;
   text-decoration: underline;
   padding: .25em .5em;
   font-size: 1rem;
-  display: block;
-  max-width: 167px;
-  width: 100%;
   text-transform: uppercase;
   font-weight: 700;
-  text-align: center;
+  text-align: right;
   margin-left: auto; }
 
 /* Boton Principal WOM */
