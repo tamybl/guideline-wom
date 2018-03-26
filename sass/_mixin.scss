@@ -18,3 +18,13 @@
         url($path+".svg") format("svg");
 
 }
+
+@mixin color-display($base_color, $percent_width) {
+  border: 1px solid $base_color;
+  .color-box {
+    background-color:$base_color;
+  }
+  .fa-clipboard {
+    width: $percent_width;
+  }
+}

@@ -230,12 +230,116 @@ pre {
 .btn-show-moreless, .btn-copy-clipboard {
   border: 0;
   outline: none;
-  color: #e92070;
   text-decoration: underline;
-  padding: .25em .5em;
   font-size: 1rem;
   text-transform: uppercase;
   font-weight: 700;
   text-align: right;
   margin-left: auto;
 }
+
+.btn-a {
+  padding: .25em .5em;
+}
+
+.wom-pink {
+  color: #e92070;
+}
+
+
+.color-container {
+  border-radius: 4px;
+  display: inline-block;
+  max-width: 152px;
+  color: #252525;
+  margin: 0.4em;
+
+  input[type="text"] {
+    border: none;
+    outline: none;
+    text-align: center;
+    padding: .5em;
+    width: 75%;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    font-family: 'cera';
+    font-size: 1em;
+    font-weight: 700;
+    color: #252525;
+  }
+  .color-box {
+    height: 60px;
+    width: 100%;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+}
+
+#c-wom_light_purple {
+  @include color-display($wom_light_purple, 16%);
+}
+
+#c-wom_purple {
+  @include color-display($wom_purple, 16%);
+}
+
+#c-wom_dark_purple {
+  @include color-display($wom_dark_purple, 16%);
+}
+
+#c-wom_darkest_purple {
+  @include color-display($wom_darkest_purple, 16%);
+}
+
+#c-wom_pink {
+  @include color-display($wom_pink, 16%);
+}
+
+#c-wom_lightest_gray {
+  @include color-display($wom_lightest_gray, 16%);
+}
+
+#c-wom_light_gray {
+  @include color-display($wom_light_gray, 16%);
+}
+
+#c-wom_gray {
+  @include color-display($wom_gray, 16%);
+}
+
+#c-wom-medium-gray {
+  @include color-display($wom_medium_gray, 16%)
+}
+
+#c-wom_dark_gray {
+  @include color-display($wom_dark_gray, 16%)
+}
+
+.check-container {
+  text-align: center;
+}
+
+#check-color {
+  @include color-display(#cccccc, 13%);
+  max-width: 50%;
+
+  input[type="color"] {
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    background-color: transparent;
+    width: 10%;
+  }
+}
+
+
+
+/*: #421259;
+$wom_darkest_purple: #2b0a37;
+$wom_pink: #fA0080;
+$wom_lightest_gray: #f1f3f5;
+$wom_light_gray: #e4e8eb;
+$wom_gray: #d0d8de;
+$wom_medium_gray: #8b9399;
+$wom_dark_gray: #555b5e*/
