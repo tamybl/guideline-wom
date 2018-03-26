@@ -836,7 +836,7 @@ article {
   text-decoration: none; }
 
 .list a:hover {
-  color: #fe0084;
+  color: #e92070;
   text-decoration: none; }
 
 .active {
@@ -862,57 +862,6 @@ article {
   padding: .5em 0 .5em 1.2em;
   font-size: 1.3em; }
 
-@media all and (max-width: 768px) {
-  .wm-nav, .wm-content, .wm-text {
-    width: 100%;
-    -webkit-flex-flow: column wrap;
-    flex-flow: column wrap; }
-
-  .wm-nav {
-    position: fixed; }
-
-  .wm-content {
-    max-width: 100%;
-    flex: 1 1 100%;
-    overflow: initial;
-    top: 200px; }
-
-  .wm-nav-content {
-    position: static;
-    width: 100%; }
-
-  .logo {
-    display: inline-block;
-    padding: 0.3em 0.6em 0.1em 0.6em; }
-
-  .toggle-menu {
-    display: block;
-    float: right;
-    font-size: 1.3em;
-    padding: .15em .6em; }
-
-  article {
-    margin-top: 40px; }
-
-  .list-title {
-    padding: .5em 0 .5em 1.2em;
-    font-size: 1em; } }
-.mob-menu {
-  float: right; }
-
-@media all and (min-width: 769px) and (max-width: 1100px) {
-  .list-title {
-    font-size: 1.2em; }
-
-  .wm-content {
-    flex: 1 1 75%;
-    max-width: 75%; }
-
-  .wm-nav-content {
-    width: 25%; }
-
-  .wm-nav {
-    flex: 1 1 25%; } }
 /* Prism Style */
 pre {
   max-height: 5em; }
@@ -994,9 +943,9 @@ pre {
     width: 16%; }
 
 #c-wom_pink {
-  border: 1px solid #fe0084; }
+  border: 1px solid #e92070; }
   #c-wom_pink .color-box {
-    background-color: #fe0084; }
+    background-color: #e92070; }
   #c-wom_pink .fa-clipboard {
     width: 16%; }
 
@@ -1021,11 +970,11 @@ pre {
   #c-wom_gray .fa-clipboard {
     width: 16%; }
 
-#c-wom-medium-gray {
+#c-wom_medium_gray {
   border: 1px solid #8b9399; }
-  #c-wom-medium-gray .color-box {
+  #c-wom_medium_gray .color-box {
     background-color: #8b9399; }
-  #c-wom-medium-gray .fa-clipboard {
+  #c-wom_medium_gray .fa-clipboard {
     width: 16%; }
 
 #c-wom_dark_gray {
@@ -1053,6 +1002,12 @@ pre {
     background-color: transparent;
     width: 10%; }
 
+.wom_purple {
+  background-color: #6b0b6c; }
+
+.button-container {
+  padding: 2em; }
+
 /*: #421259;
 $wom_darkest_purple: #2b0a37;
 $wom_pink: #fA0080;
@@ -1061,7 +1016,62 @@ $wom_light_gray: #e4e8eb;
 $wom_gray: #d0d8de;
 $wom_medium_gray: #8b9399;
 $wom_dark_gray: #555b5e*/
-/* Boton Principal WOM */
+@media all and (max-width: 768px) {
+  .wm-nav, .wm-content, .wm-text {
+    width: 100%;
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap; }
+
+  .wm-nav {
+    position: fixed; }
+
+  .wm-content {
+    max-width: 100%;
+    flex: 1 1 100%;
+    overflow: initial;
+    top: 200px; }
+
+  .wm-nav-content {
+    position: static;
+    width: 100%; }
+
+  .logo {
+    display: inline-block;
+    padding: 0.3em 0.6em 0.1em 0.6em; }
+
+  .toggle-menu {
+    display: block;
+    float: right;
+    font-size: 1.3em;
+    padding: .15em .6em; }
+
+  article {
+    margin-top: 40px; }
+
+  .list-title {
+    padding: .5em 0 .5em 1.2em;
+    font-size: 1em; }
+
+  .color-container {
+    max-width: 45%;
+    margin: 2%; } }
+.mob-menu {
+  float: right; }
+
+@media all and (min-width: 769px) and (max-width: 1100px) {
+  .list-title {
+    font-size: 1.2em; }
+
+  .wm-content {
+    flex: 1 1 75%;
+    max-width: 75%; }
+
+  .wm-nav-content {
+    width: 25%; }
+
+  .wm-nav {
+    flex: 1 1 25%; } }
+/* Base Boton Principal WOM */
 .btn-principal {
   display: block;
   width: 150px;
@@ -1069,8 +1079,10 @@ $wom_dark_gray: #555b5e*/
   margin: 1em auto;
   text-align: center;
   vertical-align: middle;
-  background: #ff2270;
+  background: #e92070;
+  border: none;
   color: #fff;
+  font-weight: 700;
   border-radius: .2rem;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
@@ -1080,33 +1092,266 @@ $wom_dark_gray: #555b5e*/
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s; }
+  .btn-principal :before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #fff;
+    background: #af0861;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    border-radius: .2rem; }
+  .btn-principal :hover, .btn-principal :focus, .btn-principal :active {
+    color: #fff; }
+  .btn-principal :hover:before, .btn-principal :focus:before, .btn-principal :active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); }
 
-.btn-principal:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #af0861;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transform-origin: 0 50%;
-  transform-origin: 0 50%;
-  -webkit-transition-property: transform;
-  transition-property: transform;
+.btn-principal-white {
+  display: block;
+  width: 150px;
+  padding: 0.75rem 1rem;
+  margin: 1em auto;
+  text-align: center;
+  vertical-align: middle;
+  background: #fff;
+  border: none;
+  color: #8f1584;
+  font-weight: 700;
+  border-radius: .2rem;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
   -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-  border-radius: .2rem; }
+  transition-duration: 0.3s; }
+  .btn-principal-white :before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #fff;
+    background: #cfdae0;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    border-radius: .2rem; }
+  .btn-principal-white :hover, .btn-principal-white :focus, .btn-principal-white :active {
+    color: #8f1584; }
+  .btn-principal-white :hover:before, .btn-principal-white :focus:before, .btn-principal-white :active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); }
 
-.btn-principal:hover, .btn-principal:focus, .btn-principal:active {
-  color: white; }
+.btn-transparent-white {
+  display: block;
+  width: 150px;
+  padding: 0.75rem 1rem;
+  margin: 1em auto;
+  text-align: center;
+  vertical-align: middle;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  font-weight: 700;
+  border-radius: .2rem;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+  .btn-transparent-white :before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #fff;
+    background: #e92070;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    border-radius: .2rem; }
+  .btn-transparent-white :hover, .btn-transparent-white :focus, .btn-transparent-white :active {
+    color: #fff; }
+  .btn-transparent-white :hover:before, .btn-transparent-white :focus:before, .btn-transparent-white :active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); }
 
-.btn-principal:hover:before, .btn-principal:focus:before, .btn-principal:active:before {
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1); }
+.btn-transparent-pink {
+  display: block;
+  width: 150px;
+  padding: 0.75rem 1rem;
+  margin: 1em auto;
+  text-align: center;
+  vertical-align: middle;
+  background: transparent;
+  border: 1px solid #e92070;
+  color: #fff;
+  font-weight: 700;
+  border-radius: .2rem;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+  .btn-transparent-pink :before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #fff;
+    background: #e92070;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    border-radius: .2rem; }
+  .btn-transparent-pink :hover, .btn-transparent-pink :focus, .btn-transparent-pink :active {
+    color: #fff; }
+  .btn-transparent-pink :hover:before, .btn-transparent-pink :focus:before, .btn-transparent-pink :active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); }
+
+.btn-principal-purple {
+  display: block;
+  width: 150px;
+  padding: 0.75rem 1rem;
+  margin: 1em auto;
+  text-align: center;
+  vertical-align: middle;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #681877;
+  font-weight: 700;
+  border-radius: .2rem;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+  .btn-principal-purple :before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #fff;
+    background: #681877;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    border-radius: .2rem; }
+  .btn-principal-purple :hover, .btn-principal-purple :focus, .btn-principal-purple :active {
+    color: #681877; }
+  .btn-principal-purple :hover:before, .btn-principal-purple :focus:before, .btn-principal-purple :active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); }
+
+.btn-transparent-purple {
+  display: block;
+  width: 150px;
+  padding: 0.75rem 1rem;
+  margin: 1em auto;
+  text-align: center;
+  vertical-align: middle;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #681877;
+  font-weight: 700;
+  border-radius: .2rem;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+  .btn-transparent-purple :before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #fff;
+    background: #681877;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    border-radius: .2rem; }
+  .btn-transparent-purple :hover, .btn-transparent-purple :focus, .btn-transparent-purple :active {
+    color: #681877; }
+  .btn-transparent-purple :hover:before, .btn-transparent-purple :focus:before, .btn-transparent-purple :active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); }
 
 /*# sourceMappingURL=main.css.map */

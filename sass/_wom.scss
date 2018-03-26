@@ -1,14 +1,16 @@
-/* Boton Principal WOM */
+/* Base Boton Principal WOM */
 
-.btn-principal {
+@mixin btn($bgColor, $bgColorHover, $colorText, $colorTextHover, $borderStyle) {
   display: block;
   width: 150px;
   padding: 0.75rem 1rem;
   margin: 1em auto;
   text-align: center;
   vertical-align: middle;
-  background: #ff2270;
-  color: #fff;
+  background: $bgColor;
+  border: $borderStyle;
+  color: $colorText;
+  font-weight: 700;
   border-radius: .2rem;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
@@ -18,32 +20,67 @@
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+
+    :before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: 1px solid #fff;
+      background: $bgColorHover;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transform-origin: 0 50%;
+      transform-origin: 0 50%;
+      -webkit-transition-property: transform;
+      transition-property: transform;
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      -webkit-transition-timing-function: ease-out;
+      transition-timing-function: ease-out;
+      border-radius: .2rem;
+    }
+
+    :hover, :focus, :active {
+      color: $colorTextHover;
+    }
+
+    :hover:before, :focus:before, :active:before {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+  }
+
+// Fondo morado
+.btn-principal {
+  @include btn(#e92070, #af0861, #fff, #fff, none);
 }
-.btn-principal:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #af0861;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transform-origin: 0 50%;
-  transform-origin: 0 50%;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-  border-radius: .2rem;
+
+.btn-principal-white {
+  @include btn(#fff, #cfdae0, #8f1584, #8f1584, none);
 }
-.btn-principal:hover, .btn-principal:focus, .btn-principal:active {
-  color: white;
+
+.btn-transparent-white {
+  @include btn(transparent, #e92070, #fff, #fff, 1px solid #fff);
 }
-.btn-principal:hover:before, .btn-principal:focus:before, .btn-principal:active:before {
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+
+.btn-transparent-pink {
+  @include btn(transparent, #e92070, #fff, #fff, 1px solid #e92070);
 }
+
+// Fondo Blanco
+
+.btn-principal-purple {
+  @include btn(transparent, #681877, #681877, #681877, 1px solid #fff);
+}
+
+.btn-transparent-purple {
+  @include btn(transparent, #681877, #681877, #681877, 1px solid #fff);
+}
+
+
+
+

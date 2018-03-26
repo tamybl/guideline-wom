@@ -211,6 +211,108 @@ p {
         <article id="botones">
           <h3>Botones</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea est ex minima debitis deleniti nam quasi placeat eveniet, voluptate impedit assumenda blanditiis velit qui, aspernatur dolores. Est dignissimos adipisci maxime.</p>
+          <h4>Base Botón (SASS) </h4>
+          <div class="code-section">
+          <pre><code class="language-css">
+/* Base Boton Principal WOM (Sass)*/
+
+@mixin btn($bgColor, $bgColorHover, $colorText, $colorTextHover, $borderStyle) {
+  display: block;
+  width: 150px;
+  padding: 0.75rem 1rem;
+  margin: 1em auto;
+  text-align: center;
+  vertical-align: middle;
+  background: $bgColor;
+  //background: #ff2270;
+  border: $borderStyle;
+  color: $colorText;
+  border-radius: .2rem;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+
+    :before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $bgColorHover;
+      //background: #af0861;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transform-origin: 0 50%;
+      transform-origin: 0 50%;
+      -webkit-transition-property: transform;
+      transition-property: transform;
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      -webkit-transition-timing-function: ease-out;
+      transition-timing-function: ease-out;
+      border-radius: .2rem;
+    }
+
+    :hover, :focus, :active {
+      color: $colorTextHover;
+    }
+
+    :hover:before, :focus:before, :active:before {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+  }
+          </code></pre>
+          <a class="btn-show-moreless wom-pink btn-a"><i class="fas fa-code"></i> <span>Ver Más</span></a> 
+          <a class="btn-copy-clipboard wom-pink btn-a"><i class="far fa-clipboard"></i> Copiar</a>
+        </div>
+          <div class="button-container wom_purple">
+            <a class="btn-principal"><span>BTN PRIMARIO</span></a>
+
+            <a class="btn-principal-white"><span>BTN PRIMARIO</span></a>
+
+            <a class="btn-transparent-white"><span>BTN PRIMARIO</span></a>
+
+            <a class="btn-transparent-pink"><span>BTN PRIMARIO</span></a>
+          </div>
+          <div class="code-section">
+          <pre><code class="language-css">
+.btn-principal {
+  @include btn(#ff2270, #af0861, #fff, #fff, none);
+}
+
+.btn-principal-white {
+  @include btn(#fff, #cfdae0, #8f1584, #8f1584, none);
+}
+          </code></pre>
+          <a class="btn-show-moreless wom-pink btn-a"><i class="fas fa-code"></i> <span>Ver Más</span></a> 
+          <a class="btn-copy-clipboard wom-pink btn-a"><i class="far fa-clipboard"></i> Copiar</a>
+        </div>
+
+          <div class="button-container">
+            <a class="btn-principal-purple"><span>BTN PRIMARIO</span></a>
+
+            <a class="btn-transparent-purple"><span>BTN PRIMARIO</span></a>
+
+          </div>
+          <div class="code-section">
+          <pre><code class="language-css">
+.btn-transparent {
+  @include btn(transparent, #fff, #681877, 1px solid #fff);
+}
+          </code></pre>
+          <a class="btn-show-moreless wom-pink btn-a"><i class="fas fa-code"></i> <span>Ver Más</span></a> 
+          <a class="btn-copy-clipboard wom-pink btn-a"><i class="far fa-clipboard"></i> Copiar</a>
+        </div>
+
+          
           <div class="img-flex">
             <img src="sass/assets/img/botones-d1.jpg" alt="" class="img-responsive">
             <img src="sass/assets/img/botones-d2.jpg" alt="" class="img-responsive">

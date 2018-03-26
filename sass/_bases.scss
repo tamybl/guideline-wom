@@ -139,77 +139,6 @@ article {
   font-size: 1.3em;
 }
 
-@media all and (max-width: 768px) {
-  
-   .wm-nav, .wm-content, .wm-text {
-    width: 100%;
-    -webkit-flex-flow: column wrap;
-    flex-flow: column wrap;
-   }
-
-   .wm-nav {
-    position: fixed;
-    //height: 90px;
-    //overflow: hidden;
-   }
-
-   .wm-content {
-      max-width: 100%;
-      flex: 1 1 100%;
-      overflow: initial;
-      top: 200px;
-   }
-
-   .wm-nav-content {
-    position: static;
-    width: 100%;
-   }
-
-  .logo {
-    display: inline-block;
-    padding: 0.3em 0.6em 0.1em 0.6em;
-   }
-
-   .toggle-menu {
-    display: block;
-    float: right;
-    font-size: 1.3em;
-    padding: .15em .6em;
-   }
-
-   article {
-    margin-top: 40px;
-   }
-
-  .list-title {
-    padding: .5em 0 .5em 1.2em;
-  font-size: 1em;
-  }
-}
-
-.mob-menu {
-  float: right;
- }
-
-@media all and (min-width: 769px) and (max-width: 1100px) {
-  .list-title {
-    font-size: 1.2em;
-  }
-
-  .wm-content {
-  flex: 1 1 75%;
-  max-width: 75%;
-  } 
-
-  .wm-nav-content {
-    width: 25%;
-  }
-
-  .wm-nav {
-    flex: 1 1 25%;
-  }
-}
-
 /* Prism Style */ 
 
 pre {
@@ -307,7 +236,7 @@ pre {
   @include color-display($wom_gray, 16%);
 }
 
-#c-wom-medium-gray {
+#c-wom_medium_gray {
   @include color-display($wom_medium_gray, 16%)
 }
 
@@ -333,6 +262,13 @@ pre {
   }
 }
 
+.wom_purple {
+  background-color: #6b0b6c;
+}
+
+.button-container {
+  padding: 2em;
+}
 
 
 /*: #421259;
@@ -343,3 +279,85 @@ $wom_light_gray: #e4e8eb;
 $wom_gray: #d0d8de;
 $wom_medium_gray: #8b9399;
 $wom_dark_gray: #555b5e*/
+
+@media all and (max-width: 768px) {
+  
+   .wm-nav, .wm-content, .wm-text {
+    width: 100%;
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+   }
+
+   .wm-nav {
+    position: fixed;
+    //height: 90px;
+    //overflow: hidden;
+   }
+
+   .wm-content {
+      max-width: 100%;
+      flex: 1 1 100%;
+      overflow: initial;
+      top: 200px;
+   }
+
+   .wm-nav-content {
+    position: static;
+    width: 100%;
+   }
+
+  .logo {
+    display: inline-block;
+    padding: 0.3em 0.6em 0.1em 0.6em;
+   }
+
+   .toggle-menu {
+    display: block;
+    float: right;
+    font-size: 1.3em;
+    padding: .15em .6em;
+   }
+
+   article {
+    margin-top: 40px;
+   }
+
+  .list-title {
+    padding: .5em 0 .5em 1.2em;
+  font-size: 1em;
+  }
+
+  .color-container {
+    max-width: 45%;
+    margin: 2%;
+  }
+}
+
+
+@media all and (max-width: 768px) {
+
+}
+
+.mob-menu {
+  float: right;
+ }
+
+@media all and (min-width: 769px) and (max-width: 1100px) {
+  .list-title {
+    font-size: 1.2em;
+  }
+
+  .wm-content {
+  flex: 1 1 75%;
+  max-width: 75%;
+  } 
+
+  .wm-nav-content {
+    width: 25%;
+  }
+
+  .wm-nav {
+    flex: 1 1 25%;
+  }
+}
+
