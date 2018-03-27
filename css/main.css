@@ -1080,18 +1080,20 @@ $wom_dark_gray: #555b5e*/
   text-align: center;
   vertical-align: middle;
   background: #e92070;
-  border: none;
+  box-shadow: 0 0 2px transparent;
   color: #fff;
   font-weight: 700;
   border-radius: .2rem;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
   position: relative;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s; }
+  transition-duration: 0.3s;
+  text-transform: uppercase;
+  font-weight: 700;
+  overflow: hidden; }
   .btn-principal :before {
     content: "";
     position: absolute;
@@ -1100,7 +1102,6 @@ $wom_dark_gray: #555b5e*/
     left: 0;
     right: 0;
     bottom: 0;
-    border: 1px solid #fff;
     background: #af0861;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
@@ -1127,18 +1128,20 @@ $wom_dark_gray: #555b5e*/
   text-align: center;
   vertical-align: middle;
   background: #fff;
-  border: none;
+  box-shadow: 0 0 2px transparent;
   color: #8f1584;
   font-weight: 700;
   border-radius: .2rem;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
   position: relative;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s; }
+  transition-duration: 0.3s;
+  text-transform: uppercase;
+  font-weight: 700;
+  overflow: hidden; }
   .btn-principal-white :before {
     content: "";
     position: absolute;
@@ -1147,7 +1150,6 @@ $wom_dark_gray: #555b5e*/
     left: 0;
     right: 0;
     bottom: 0;
-    border: 1px solid #fff;
     background: #cfdae0;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
@@ -1174,18 +1176,20 @@ $wom_dark_gray: #555b5e*/
   text-align: center;
   vertical-align: middle;
   background: transparent;
-  border: 1px solid #fff;
+  box-shadow: 0 0 0 2px #fff inset;
   color: #fff;
   font-weight: 700;
   border-radius: .2rem;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
   position: relative;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s; }
+  transition-duration: 0.3s;
+  text-transform: uppercase;
+  font-weight: 700;
+  overflow: hidden; }
   .btn-transparent-white :before {
     content: "";
     position: absolute;
@@ -1194,7 +1198,6 @@ $wom_dark_gray: #555b5e*/
     left: 0;
     right: 0;
     bottom: 0;
-    border: 1px solid #fff;
     background: #e92070;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
@@ -1221,18 +1224,20 @@ $wom_dark_gray: #555b5e*/
   text-align: center;
   vertical-align: middle;
   background: transparent;
-  border: 1px solid #e92070;
-  color: #fff;
+  box-shadow: 0 0 0 2px #e92070 inset;
+  color: #e92070;
   font-weight: 700;
   border-radius: .2rem;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
   position: relative;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s; }
+  transition-duration: 0.3s;
+  text-transform: uppercase;
+  font-weight: 700;
+  overflow: hidden; }
   .btn-transparent-pink :before {
     content: "";
     position: absolute;
@@ -1241,7 +1246,6 @@ $wom_dark_gray: #555b5e*/
     left: 0;
     right: 0;
     bottom: 0;
-    border: 1px solid #fff;
     background: #e92070;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
@@ -1267,19 +1271,21 @@ $wom_dark_gray: #555b5e*/
   margin: 1em auto;
   text-align: center;
   vertical-align: middle;
-  background: transparent;
-  border: 1px solid #fff;
-  color: #681877;
+  background: #831383;
+  box-shadow: 0 0 0 2px transparent;
+  color: #fff;
   font-weight: 700;
   border-radius: .2rem;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
   position: relative;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s; }
+  transition-duration: 0.3s;
+  text-transform: uppercase;
+  font-weight: 700;
+  overflow: hidden; }
   .btn-principal-purple :before {
     content: "";
     position: absolute;
@@ -1288,8 +1294,7 @@ $wom_dark_gray: #555b5e*/
     left: 0;
     right: 0;
     bottom: 0;
-    border: 1px solid #fff;
-    background: #681877;
+    background: #4b0a5a;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
     -webkit-transform-origin: 0 50%;
@@ -1302,7 +1307,7 @@ $wom_dark_gray: #555b5e*/
     transition-timing-function: ease-out;
     border-radius: .2rem; }
   .btn-principal-purple :hover, .btn-principal-purple :focus, .btn-principal-purple :active {
-    color: #681877; }
+    color: #fff; }
   .btn-principal-purple :hover:before, .btn-principal-purple :focus:before, .btn-principal-purple :active:before {
     -webkit-transform: scaleX(1);
     transform: scaleX(1); }
@@ -1315,18 +1320,20 @@ $wom_dark_gray: #555b5e*/
   text-align: center;
   vertical-align: middle;
   background: transparent;
-  border: 1px solid #fff;
-  color: #681877;
+  box-shadow: 0 0 0 2px #831383 inset;
+  color: #831383;
   font-weight: 700;
   border-radius: .2rem;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
   position: relative;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s; }
+  transition-duration: 0.3s;
+  text-transform: uppercase;
+  font-weight: 700;
+  overflow: hidden; }
   .btn-transparent-purple :before {
     content: "";
     position: absolute;
@@ -1335,8 +1342,7 @@ $wom_dark_gray: #555b5e*/
     left: 0;
     right: 0;
     bottom: 0;
-    border: 1px solid #fff;
-    background: #681877;
+    background: #831383;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
     -webkit-transform-origin: 0 50%;
@@ -1349,7 +1355,7 @@ $wom_dark_gray: #555b5e*/
     transition-timing-function: ease-out;
     border-radius: .2rem; }
   .btn-transparent-purple :hover, .btn-transparent-purple :focus, .btn-transparent-purple :active {
-    color: #681877; }
+    color: #fff; }
   .btn-transparent-purple :hover:before, .btn-transparent-purple :focus:before, .btn-transparent-purple :active:before {
     -webkit-transform: scaleX(1);
     transform: scaleX(1); }

@@ -8,18 +8,22 @@
   text-align: center;
   vertical-align: middle;
   background: $bgColor;
-  border: $borderStyle;
+  //border: $borderStyle;
+  box-shadow: $borderStyle;
   color: $colorText;
   font-weight: 700;
   border-radius: .2rem;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
+  //box-shadow: 0 0 1px transparent;
   position: relative;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  text-transform: uppercase;
+  font-weight: 700;
+  overflow: hidden;
 
     :before {
       content: "";
@@ -29,7 +33,8 @@
       left: 0;
       right: 0;
       bottom: 0;
-      border: 1px solid #fff;
+      //border: 1px solid #fff;
+      //box-shadow: 0 0 1px #fff inset;
       background: $bgColorHover;
       -webkit-transform: scaleX(0);
       transform: scaleX(0);
@@ -56,29 +61,29 @@
 
 // Fondo morado
 .btn-principal {
-  @include btn(#e92070, #af0861, #fff, #fff, none);
+  @include btn(#e92070, #af0861, #fff, #fff, 0 0 2px transparent);
 }
 
 .btn-principal-white {
-  @include btn(#fff, #cfdae0, #8f1584, #8f1584, none);
+  @include btn(#fff, #cfdae0, #8f1584, #8f1584, 0 0 2px transparent);
 }
 
 .btn-transparent-white {
-  @include btn(transparent, #e92070, #fff, #fff, 1px solid #fff);
+  @include btn(transparent, #e92070, #fff, #fff, 0 0 0 2px #fff inset);
 }
 
 .btn-transparent-pink {
-  @include btn(transparent, #e92070, #fff, #fff, 1px solid #e92070);
+  @include btn(transparent, #e92070, #e92070, #fff, 0 0 0 2px #e92070 inset );
 }
 
 // Fondo Blanco
 
 .btn-principal-purple {
-  @include btn(transparent, #681877, #681877, #681877, 1px solid #fff);
+  @include btn(#831383, #4b0a5a, #fff, #fff, 0 0 0 2px transparent);
 }
 
 .btn-transparent-purple {
-  @include btn(transparent, #681877, #681877, #681877, 1px solid #fff);
+  @include btn(transparent, #831383, #831383, #fff, 0 0 0 2px #831383 inset);
 }
 
 

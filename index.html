@@ -224,18 +224,20 @@ p {
   text-align: center;
   vertical-align: middle;
   background: $bgColor;
-  //background: #ff2270;
-  border: $borderStyle;
+  box-shadow: $borderStyle;
   color: $colorText;
+  font-weight: 700;
   border-radius: .2rem;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
   position: relative;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  text-transform: uppercase;
+  font-weight: 700;
+  overflow: hidden;
 
     :before {
       content: "";
@@ -246,7 +248,6 @@ p {
       right: 0;
       bottom: 0;
       background: $bgColorHover;
-      //background: #af0861;
       -webkit-transform: scaleX(0);
       transform: scaleX(0);
       -webkit-transform-origin: 0 50%;
@@ -269,58 +270,101 @@ p {
       transform: scaleX(1);
     }
   }
+
           </code></pre>
           <a class="btn-show-moreless wom-pink btn-a"><i class="fas fa-code"></i> <span>Ver Más</span></a> 
           <a class="btn-copy-clipboard wom-pink btn-a"><i class="far fa-clipboard"></i> Copiar</a>
         </div>
           <div class="button-container wom_purple">
             <a class="btn-principal"><span>BTN PRIMARIO</span></a>
-
-            <a class="btn-principal-white"><span>BTN PRIMARIO</span></a>
-
-            <a class="btn-transparent-white"><span>BTN PRIMARIO</span></a>
-
-            <a class="btn-transparent-pink"><span>BTN PRIMARIO</span></a>
           </div>
           <div class="code-section">
           <pre><code class="language-css">
 .btn-principal {
-  @include btn(#ff2270, #af0861, #fff, #fff, none);
-}
-
-.btn-principal-white {
-  @include btn(#fff, #cfdae0, #8f1584, #8f1584, none);
+  @include btn(#e92070, #af0861, #fff, #fff, 0 0 2px transparent);
 }
           </code></pre>
           <a class="btn-show-moreless wom-pink btn-a"><i class="fas fa-code"></i> <span>Ver Más</span></a> 
           <a class="btn-copy-clipboard wom-pink btn-a"><i class="far fa-clipboard"></i> Copiar</a>
         </div>
 
+
+        <div class="button-container wom_purple">
+            <a class="btn-principal-white"><span>BTN PRIMARIO</span></a>
+          </div>
+          <div class="code-section">
+          <pre><code class="language-css">
+.btn-principal-white {
+  @include btn(#fff, #cfdae0, #8f1584, #8f1584, 0 0 2px transparent);
+}
+          </code></pre>
+          <a class="btn-show-moreless wom-pink btn-a"><i class="fas fa-code"></i> <span>Ver Más</span></a> 
+          <a class="btn-copy-clipboard wom-pink btn-a"><i class="far fa-clipboard"></i> Copiar</a>
+        </div>
+
+        <div class="button-container wom_purple">
+            <a class="btn-transparent-white"><span>BTN PRIMARIO</span></a>
+          </div>
+          <div class="code-section">
+          <pre><code class="language-css">
+.btn-transparent-white {
+  @include btn(transparent, #e92070, #fff, #fff, 0 0 0 2px #fff inset);
+}
+          </code></pre>
+          <a class="btn-show-moreless wom-pink btn-a"><i class="fas fa-code"></i> <span>Ver Más</span></a> 
+          <a class="btn-copy-clipboard wom-pink btn-a"><i class="far fa-clipboard"></i> Copiar</a>
+        </div>
+
+        <div class="button-container wom_purple">
+            <a class="btn-transparent-pink"><span>BTN PRIMARIO</span></a>
+          </div>
+          <div class="code-section">
+          <pre><code class="language-css">
+.btn-transparent-pink {
+  @include btn(transparent, #e92070, #e92070, #fff, 0 0 0 2px #e92070 inset );
+}
+          </code></pre>
+          <a class="btn-show-moreless wom-pink btn-a"><i class="fas fa-code"></i> <span>Ver Más</span></a> 
+          <a class="btn-copy-clipboard wom-pink btn-a"><i class="far fa-clipboard"></i> Copiar</a>
+        </div>
+    <!-- Botones Fondo Blanco -->
+
           <div class="button-container">
             <a class="btn-principal-purple"><span>BTN PRIMARIO</span></a>
 
+          </div>
+          <div class="code-section">
+          <pre><code class="language-css">
+.btn-principal-purple {
+  @include btn(transparent, #fff, #681877, 0 0 0 2px transparent);
+}
+          </code></pre>
+          <a class="btn-show-moreless wom-pink btn-a"><i class="fas fa-code"></i> <span>Ver Más</span></a> 
+          <a class="btn-copy-clipboard wom-pink btn-a"><i class="far fa-clipboard"></i> Copiar</a>
+        </div>
+
+<div class="button-container">
             <a class="btn-transparent-purple"><span>BTN PRIMARIO</span></a>
 
           </div>
           <div class="code-section">
           <pre><code class="language-css">
-.btn-transparent {
-  @include btn(transparent, #fff, #681877, 1px solid #fff);
+.btn-transparent-purple {
+  @include btn(transparent, #831383, #831383, #fff, 0 0 0 2px #831383 inset);
 }
           </code></pre>
           <a class="btn-show-moreless wom-pink btn-a"><i class="fas fa-code"></i> <span>Ver Más</span></a> 
           <a class="btn-copy-clipboard wom-pink btn-a"><i class="far fa-clipboard"></i> Copiar</a>
         </div>
-
           
-          <div class="img-flex">
+          <!--<div class="img-flex">
             <img src="sass/assets/img/botones-d1.jpg" alt="" class="img-responsive">
             <img src="sass/assets/img/botones-d2.jpg" alt="" class="img-responsive">
           </div>
           <div class="img-flex">
             <img src="sass/assets/img/botones-l1.jpg" alt="" class="img-responsive">
             <img src="sass/assets/img/botones-l2.jpg" alt="" class="img-responsive">
-          </div>
+          </div>-->
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum reprehenderit hic quia eius a velit necessitatibus veritatis, quae atque dignissimos quidem dolorem dolore, aperiam, placeat ratione ipsam adipisci quaerat ab. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius voluptates soluta iusto error voluptatum, quas fugiat cum accusamus alias vero non, corporis possimus nisi eaque qui ducimus nam officiis. Provident. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis porro inventore, vero natus assumenda laborum similique. Animi aliquid blanditiis praesentium ipsam, rerum, est quisquam alias. Eum quis, incidunt error unde!</p> 
         </article>
         <article id="header"> 
