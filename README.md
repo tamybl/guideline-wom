@@ -1,6 +1,7 @@
 # Guideline WOM #
 
-Proyecto de Practica WOM: Guía de Estilos para WOM.
+Proyecto de Practica: Guideline para WOM. 
+Consiste en una Guía de Estilos en etapa inicial que busca crear componentes visuales listos para implementar en futuros proyectos de WOM facilitando el desarrollo y creando un estandar para programadores y diseñadores. 
 
 ### Herramientas Utilizadas ###
 
